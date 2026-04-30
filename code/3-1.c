@@ -17,11 +17,7 @@ int main() {
     }
     
     for(int i=0; i<n; i++){
-        if(i < 5){
-            printf("%s\n", names[i]);
-        }else{
-            printf("%s", names[i]);
-        }
+        printf("%s\n", names[i]);
     }
 
     return 0;
