@@ -6,12 +6,13 @@ int main() {
     char *names[] = {"apple", "mango", "ant", "banana", "cat", "anaconda"};
     int n = sizeof(names) / sizeof(names[0]);
 
+    char **p = names;
     for(int i=n-1; i>=0; i--){
         for(int j=0; j<i; j++){
             if(strcmp(names[j],names[j+1]) == 1){
-                char* temp = *(names + j);
-                *(names + j) = *(names + j + 1);
-                *(names + j + 1) = temp;
+                char* temp = *(p + j);
+                *(p + j) = *(p + j + 1);
+                *(p + j + 1) = temp;
             }
         }
     }
@@ -20,5 +21,7 @@ int main() {
         printf("%s\n", names[i]);
     }
 
+    return 0;
+}
     return 0;
 }
